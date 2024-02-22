@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        h1 {
+            color: #3498db;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Estilo alternativo para las filas */
+        tbody tr:nth-child(even) {
+            background-color: #ecf0f1;
+        }
+
+        /* Hover sobre las filas */
+        tbody tr:hover {
+            background-color: #d5e8f9;
+        }
+    </style>
+    <title>Lista de Estudiantes</title>
+</head>
+<body>
+    <h1>Lista de Estudiantes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Número de Póliza</th>
+                <th>Identificación</th>
+                <th>Nombre</th>
+                <th>Apellido 1</th>
+                <th>Apellido 2</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Vigencia Desde</th>
+                <th>Vigencia Hasta</th>
+                <th>Participa</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+                <tr>
+                    <td>{{ estudiante[0] }}</td>
+                    <td>{{ estudiante[1] }}</td>
+                    <td>{{ estudiante[2] }}</td>
+                    <td>{{ estudiante[3] }}</td>
+                    <td>{{ estudiante[4] }}</td>
+                    <td>{{ estudiante[5] }}</td>
+                    <td>{{ estudiante[6] }}</td>
+                    <td>{{ estudiante[7] }}</td>
+                    <td>{{ estudiante[8] }}</td>
+                    <td>{{ estudiante[9] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
